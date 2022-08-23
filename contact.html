@@ -37,8 +37,77 @@
         Seeing smiles in our customer faces are our main motto.
         <br> We WELCOME you to the the most ancient NEWA Food Restautant.
     </p>    
+    </section>
+     </div>
+
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h1>相談、予約、質問</h1>
+            <input type="text" id="name" placeholder="お名前を記入" required>
+            <input type="email" id="email" placeholder="メールアドレス" required>
+            <input type="text" id="phone" placeholder="電話番号" required>
+            <textarea id="message"rows="4" placeholder="メッセージ"></textarea> 
+            <button type="Submit">送信</button>
+        </form>
+        </div>
+<!------------------------------JSscript---------------------------->
+         <script src="https://smtpjs.com/v3/smtp.js"></script>
+         <script>
+           function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "Chirayuhorajp@gmail.com",
+                Password : "",
+                To : 'Chirayu123hora@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enquiry",
+                Body : "And this is the body"
+            }).then(
+              message => alert(message)
+            );
+           }
+
+         </script> 
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!---footer----->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>ベスト  OF　THE　ベスト<br> Not today but for sure Someday
+    </p>
+    <div class="icons">
     
-     </section>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-google-plus-g"> </i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+        
+    </div>
+    <p>Made with <i class="fa fa-heart"></i><b><br>By Chirayu</b></p>
+</section>
+<div class="end">
+    Copyright &copy; Web Coding Pro. All right Reserved<br>Chirayu Hora
+</div>
     
      <!-------JavaScript for toggle menu------->
     <script>
